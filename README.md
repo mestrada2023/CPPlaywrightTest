@@ -1,5 +1,6 @@
 # Assessment
 
+## The application
 This repository contains a frontend and a backend service. These services together serve as a ToDo List App.
 Read the below documentation for details about each service.
 
@@ -7,13 +8,12 @@ Read the below documentation for details about each service.
 
 [Backend Readme](Backend/TodoList.Api/README.md)
 
-> ℹ️ **The task at hand is to deploy the application inside a container or on a vm (IaaS). The application is completely self contained and should not require any additional dependencies to run.**
+## The task
+> ℹ️ **The task at hand is to deploy the application inside a container or on a vm in a cloud. The application is completely self contained and should not require any additional dependencies to run.**
 
-Candidates should assume that the solution will be deployed to an empty cloud account/subscription with no existing infrastructure in place.
+The end solution should deployable to an empty cloud account/subscription, such as a new AWS account. A person from ClearPoint should be able to deploy the end solution to their cloud account to verify if it works. There should not be a requirement for ClearPoint to access a candidate's cloud services account to deploy this solution.
 
-Candidates should use IaC to deploy the infrastructure required.
-
-There should not be a requirement for Clearpoint to access a candidate's cloud services account to deploy this solution.
+Candidates should use IaC to deploy the infrastructure required. Please let us know which one would you go for.
 
 Candidates should provide documentation on their solution, including:
 
@@ -21,9 +21,13 @@ Candidates should provide documentation on their solution, including:
 * High level architectural overview of your deployment.
 * Process instructions for provisioning your solution.
 
+Please take a look at the [Assessment Grading Criteria](#-assessment-grading-criteria) below.
+
 ## Bringing up the app using docker-compose
 
-Running `docker-compose up` from the root directory of this project will build the images and spin up containers for `frontend` and `backend` and the app will be accessible at http://localhost:3000
+For testing purposes, the application can be deployed using docker-compose. Running `docker-compose up` from the root directory of this project will build the images and spin up containers for `frontend` and `backend` and the app will be accessible at http://localhost:3000
+
+However, the end solution should provide such infrastructure that would satisfy the [Assessment Grading Criteria](#-assessment-grading-criteria) below.
 
 ## Assessment Grading Criteria
 
@@ -34,6 +38,7 @@ The submission should the following criteria:
 * Must be able to start from a cloned git repo.
 * Must document any pre-requisites clearly.
 * Must deploy infrastructure using code.
+* Must deploy to a cloud account/subscription.
 
 ##### Grading
 
