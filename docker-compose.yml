@@ -8,5 +8,8 @@ services:
   api:
     build: ./Backend/TodoList.Api
     image: cptodoapi
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "3002:80"
+     - "3002:80"
+
