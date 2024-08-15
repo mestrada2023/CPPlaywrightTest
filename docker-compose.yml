@@ -1,15 +1,33 @@
-version: "3.9"
 services:
   web:
     build: ./Frontend
     image: cptodoui
     ports:
       - "3000:80"
+    networks:
+      - app-network
+   
   api:
     build: ./Backend/TodoList.Api
     image: cptodoapi
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+     - ASPNETCORE_ENVIRONMENT=Development
     ports:
      - "3002:80"
-
+    networks:
+     - app-network
+   
+  playwright-tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - app-network
+    command: ["npx", "playwright", "test"]
+    environment:
+      - PLAYWRIGHT_SHOW_REPORT_PORT=9324
+  
+networks:
+  app-network:
+    driver: bridge
+      
