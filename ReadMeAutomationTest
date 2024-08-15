@@ -1,9 +1,9 @@
 Prerequisites
 Ensure that you have the following installed on your machine:
 
-Git
-Docker
-Docker Compose
+(a) Git
+(b) Docker
+(c) Docker Compose
 
 Cloning the Repository
 To clone the repository, open your terminal and run the following command:
