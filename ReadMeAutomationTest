@@ -1,0 +1,30 @@
+Prerequisites
+Ensure that you have the following installed on your machine:
+
+Git
+Docker
+Docker Compose
+
+Cloning the Repository
+To clone the repository, open your terminal and run the following command:
+
+Copy code
+git clone https://github.com/mestrada2023/CPPlaywrightTest.git
+
+
+Setting Up Docker
+The project is containerized and can be run using Docker Compose. The docker-compose.yml file in the root of the repository defines the services for both the frontend and backend.
+
+1. Build and Run
+Commands below - 
+(a) docker-compose up --build -d
+This is to run web, api and playwright tests
+(b) npx playwright test
+This is to run the automation test
+2. npx playwright show-report --port=9324
+This is to show the report
+
+
+Stopping the Containers
+To stop the containers, press CTRL+C in the terminal where docker-compose up is running. Alternatively, you can stop them by running:
+docker-compose down
